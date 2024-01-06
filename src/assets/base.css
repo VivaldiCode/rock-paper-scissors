@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+:root {
+    --ScissorsGradient: radial-gradient(circle, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    --PaperGradient: radial-gradient(circle, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    --RockGradient: radial-gradient(circle, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    --LizardGradient: radial-gradient(circle, hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+    --Cyan: radial-gradient(circle, hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+    --BackgroundGradient: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    --BackgroundColor: hsl(237, 49%, 15%);
+    --LightText: hsl(228, 23%, 74%);
+    --DarkText: hsl(229, 25%, 31%);
+    --ScoreText: hsl(229, 64%, 46%);
+    --HeaderOutline: hsl(217, 16%, 45%);
+}
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--LightText);
+    background: var(--BackgroundColor);
+    background: var(--BackgroundGradient);
+    transition: color 0.5s,
+    background-color 0.5s;
+    line-height: 1.6;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
