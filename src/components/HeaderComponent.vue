@@ -8,7 +8,6 @@ const props = defineProps<{
 <template>
   <div class="header">
     <div class="title">
-      <h1>Rock<br/> Paper<br/> Scissors</h1>
     </div>
     <div class="score">
       <span>Score</span>

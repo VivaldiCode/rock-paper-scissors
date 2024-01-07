@@ -62,8 +62,11 @@ body {
 }
 
 .header .title {
-    width: 50%;
+    width: 115px;
+    height: 114px;
     color: white;
+    background: url("logo-bonus.svg");
+
 }
 
 .header .title h1 {
@@ -215,6 +218,19 @@ body {
     animation: pulse 1.5s infinite;
 }
 
+.rules-button{
+    position: fixed;
+    border: solid 2px #fff;
+    border-radius: 6px;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px 20px;
+    color: white;
+    background: none;
+    font-weight: 700;
+    cursor: pointer;
+
+}
 
 @keyframes pulse {
     0% {

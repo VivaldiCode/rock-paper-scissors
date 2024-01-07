@@ -10,7 +10,7 @@ interface GameData {
   userScore: number;
   computerScore: number;
   isActive: boolean;
-
+  rulesActive: boolean;
 }
 
 export default {
@@ -24,7 +24,8 @@ export default {
       resultClass: '',
       userScore: 0,
       computerScore: 0,
-      isActive: false
+      isActive: false,
+      rulesActive: false
     }
   },
 
@@ -96,6 +97,7 @@ export default {
         <button class="rock" @click="makeUserChoice('rock')"></button>
       </div>
     </div>
+    <button class="rules-button" @click="rulesActive=true">RULES</button>
   </div>
   <div id="modal-container" :class="{ active: isActive, four: isActive }">
     <div class="modal-background">
@@ -104,7 +106,8 @@ export default {
           <div class="result-button">
             <h1 v-if="userChoice">You Pick:</h1>
             <div class="choice choice-result">
-              <button :class="userChoice + ' '  + ((resultClass === 'win' || resultClass === 'tie') ? 'wave' : '')"></button>
+              <button
+                :class="userChoice + ' '  + ((resultClass === 'win' || resultClass === 'tie') ? 'wave' : '')"></button>
             </div>
           </div>
           <div class="result-status">
@@ -114,11 +117,21 @@ export default {
           <div class="result-button">
             <h1 v-if="computerChoice">House Pick:</h1>
             <div class="choice choice-result">
-              <button :class="computerChoice + ' ' + ((resultClass === 'lose' || resultClass === 'tie') ? 'wave' : '')"></button>
+              <button
+                :class="computerChoice + ' ' + ((resultClass === 'lose' || resultClass === 'tie') ? 'wave' : '')"></button>
             </div>
           </div>
         </div>
-
+      </div>
+    </div>
+  </div>
+  <div id="modal-container" :class="{ active: rulesActive, four: rulesActive }">
+    <div class="modal-background">
+      <div class="modal">
+        <div @click="rulesActive=false" class="close-button">x</div>
+        <div>
+          <img src="@/assets/image-rules-bonus.svg" alt="rules">
+        </div>
       </div>
     </div>
   </div>

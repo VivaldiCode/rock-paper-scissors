@@ -27,6 +27,7 @@ body.modal-active {
     border-radius: 20px;
     position: absolute;
     right: -10px;
+    cursor: pointer;
     top: -10px;
 }
 
